@@ -1,5 +1,5 @@
 <h1>tools-app</h1>
-<nav>
+<nav *ngIf="showHeader">
   <ul>
     <li><a routerLink="home/child-a">Child A</a></li>
     <li><a routerLink="home/child-b">Child B</a></li>
@@ -7,4 +7,3 @@
 </nav>
 
 <router-outlet></router-outlet>
-

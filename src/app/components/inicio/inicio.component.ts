@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,9 +7,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./inicio.component.scss'],
 })
 export class InicioComponent {
-  constructor(private router: Router) { }
-  updateSalary(data: any) {
-    console.log(data.salary);
+  @Output() userSalary = new EventEmitter<number>();
+  salaryData: number | undefined;
+  constructor(private router: Router) {}
+
+  submitSalary(data: any) {
+    this.salaryData = data.salary;
+    console.log(this.salaryData);
     this.router.navigate(['home']);
+
   }
 }

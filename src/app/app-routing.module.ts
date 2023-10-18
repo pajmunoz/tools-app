@@ -4,7 +4,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  {path:'', component: InicioComponent },
+  {path:'/', component: InicioComponent },
   {path:'home', component: HomeComponent,
   children: [
     {

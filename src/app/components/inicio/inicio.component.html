@@ -1,5 +1,5 @@
 <p>inicio works!</p>
-<form  #salary = "ngForm" (ngSubmit)="updateSalary(salary.value)">
+<form  #salary = "ngForm" (ngSubmit)="submitSalary(salary.value)">
   <span for="salary">Salario Bruto</span>
   <input id="salary" name="salary" type="number" placeholder="156.000.00" ngModel>
   <button type="submit">Continuar</button>
